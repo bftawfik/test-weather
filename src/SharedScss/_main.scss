@@ -1,0 +1,7 @@
+@import "./fonts";
+@import "./variables";
+
+:root, * {
+  font-family: $font-roboto;
+  box-sizing: border-box;
+}

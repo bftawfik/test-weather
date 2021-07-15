@@ -1,7 +1,7 @@
-  
-$font-pacifico: 'Pacifico', cursive;;
+$font-pacifico: "Pacifico", cursive;
+$font-roboto: "Roboto Slab", serif;
 
-// $font-family: $font-titillium-web;
+$font-family: $font-roboto;
 
 $max-width: 1200px;
 $web-side-space: 16px;
@@ -33,6 +33,4 @@ $clr-gray: gray; //#808080
 $clr-black: black; //#000000
 
 $clr-001: #25293a;
-$clr-002: #111111;
-$clr-003: #aaaa00;
-$clr-004: #cccc00;
+$clr-002: #1e1e1e;

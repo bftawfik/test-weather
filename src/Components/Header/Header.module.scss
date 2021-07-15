@@ -1,6 +1,11 @@
-@import "../../SharedScss/fonts";
-@import "../../SharedScss/variables";
+@import "../../SharedScss/main";
 
 .Header {
-  background-color: blue;
+  background-color: $clr-002;
+  color: $clr-white;
+  .logo {
+    font-family: $font-pacifico;
+    font-size: 24px;
+    text-transform: capitalize;
+  }
 }

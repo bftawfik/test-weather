@@ -8,7 +8,7 @@ import * as Classes from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={Classes.Header}>
-      <div>{missingData.logo}</div>
+      <div className={Classes.logo}>{missingData.logo}</div>
       <div>{missingData.slogan}</div>
       <Navigation />
       <Banner />
