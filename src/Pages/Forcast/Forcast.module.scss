@@ -1,0 +1,13 @@
+@import "../../SharedScss/variables";
+
+.Forcast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  font-size: 40px;
+  font-weight: 900;
+  background-color: $clr-001;
+  color: $clr-white;
+  text-transform: capitalize;
+}

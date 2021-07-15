@@ -1,9 +1,11 @@
-import Header from "../../Components/Header/Header";
+import Weather from "../../Components/Weather/Weather";
+
+import * as Classes from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div>
-      <Header />
+    <div className={Classes.Home}>
+      <Weather />
     </div>
   );
 };
