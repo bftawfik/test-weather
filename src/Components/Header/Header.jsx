@@ -1,20 +1,17 @@
-import { Link } from "react-router-dom";
+import Navigation from "../Navigation/Navigation";
+import Banner from "../Banner/Banner";
+
 import missingData from "../../mock/header";
+
+import * as Classes from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <div>
-      <div>{missingData.bgText}</div>
+    <div className={Classes.Header}>
       <div>{missingData.logo}</div>
       <div>{missingData.slogan}</div>
-      <div>{missingData.title}</div>
-      <ul>
-        {missingData.navigation.map((item) => (
-          <li key={item.id}>
-            <Link to={item.link}>{item.label}</Link>
-          </li>
-        ))}
-      </ul>
+      <Navigation />
+      <Banner />
     </div>
   );
 };
