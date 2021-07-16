@@ -3,15 +3,19 @@ import Banner from "../Banner/Banner";
 
 import missingData from "../../mock/header";
 
-import * as Classes from "./Header.module.scss";
+import * as classes from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <div className={Classes.Header}>
-      <div className={Classes.logo}>{missingData.logo}</div>
-      <div>{missingData.slogan}</div>
-      <Navigation />
-      <Banner />
+    <div className={classes.Header}>
+      <div className={classes.headerRow}>
+        <div className={classes.logo}>{missingData.logo}</div>
+        <div className={classes.slogan}>
+          <span>{missingData.slogan}</span>
+        </div>
+      </div>
+      <Navigation classes={classes} />
+      <Banner classes={classes} />
     </div>
   );
 };

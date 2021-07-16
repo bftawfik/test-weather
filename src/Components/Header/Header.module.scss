@@ -1,11 +1,157 @@
 @import "../../SharedScss/main";
 
 .Header {
+  position: relative;
   background-color: $clr-002;
   color: $clr-white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 635px;
+  .headerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
   .logo {
     font-family: $font-pacifico;
-    font-size: 24px;
+    font-size: 26px;
     text-transform: capitalize;
+    margin: 26px;
+    justify-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .slogan {
+    display: flex;
+    font-size: 19px;
+    margin: 27px 0;
+    span {
+      margin-top: 4px;
+    }
+    &::before {
+      content: "R";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $clr-white;
+      color: $clr-002;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 19px;
+      margin-right: 10px;
+    }
+  }
+  .Navigation {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 3;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transform: rotate(-90deg) translate(0, 0);
+    transform-origin: bottom right;
+    font-size: 14.5px;
+    li {
+      display: flex;
+      padding: 0 14px;
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }
+  .Banner {
+    position: relative;
+    .dots {
+      span {
+        position: absolute;
+        width: 44px;
+        height: 44px;
+        background-color: $clr-003;
+        // background-color: red;
+        border-radius: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background-color: $clr-002;
+        }
+        &:first-child {
+          top: 70px;
+          left: 50%;
+          transform: translateX(300px);
+        }
+        &:nth-child(2) {
+          width: 26px;
+          height: 26px;
+          top: 255px;
+          left: 50%;
+          transform: translateX(-289px);
+          &:after {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        &:nth-child(3) {
+          width: 40px;
+          height: 40px;
+          top: 317px;
+          left: 50%;
+          transform: translateX(-557px);
+          &:after {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        &:nth-child(4) {
+          width: 26px;
+          height: 26px;
+          top: 483px;
+          left: 50%;
+          transform: translateX(-26px);
+          &:after {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+    .bgText {
+      font-size: 180px;
+      text-transform: uppercase;
+      letter-spacing: 26px;
+      width: 800px;
+      opacity: 0.1;
+      position: absolute;
+      top: 94px;
+      left: 50%;
+      transform: translateX(-480px);
+    }
+    .title {
+      font-size: 105px;
+      font-weight: bold;
+      text-transform: capitalize;
+      word-spacing: 100vw;
+      margin: 135px 0 50px 47%;
+      line-height: 1.17;
+      letter-spacing: -6px;
+    }
   }
 }
