@@ -1,20 +1,111 @@
+@import "../../SharedScss/variables";
+
 .Weather {
-  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  background-image: url("Untitled-1.jpg");
   .slider {
     width: 100%;
+    margin: 50px 0 30px;
+    .slide {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      .contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 20px;
+        .title {
+          text-align: center;
+          font-size: 22px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .subtitle {
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          opacity: 0.15;
+          margin-bottom: 25px;
+        }
+        .form {
+          background-color: #ff000066;
+          display: flex;
+          font-family: $font-arial;
+          // margin-bottom: 20px;
+          input {
+            background-color: transparent;
+            flex-grow: 1;
+            padding: 14px 15px;
+            font-size: 18px;
+            font-family: inherit;
+            color: $clr-black;
+            background-color: $clr-white;
+            border: 0;
+          }
+          button {
+            background-color: transparent;
+            border: 0;
+            background-color: $clr-004;
+            width: 30%;
+            font-size: 18px;
+            font-family: inherit;
+            color: inherit;
+          }
+        }
+        .data {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h2 {
+            font-size: 36px;
+            font-weight: normal;
+            margin-bottom: 26px;
+          }
+          i {
+            background-color: red;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+          }
+          h3 {
+            margin-top: 30px;
+            font-size: 34px;
+            font-weight: normal;
+            margin-bottom: 20px;
+          }
+          .temp {
+            font-size: 56px;
+            font-weight: normal;
+            margin: 12px 0;
+          }
+          .tempRang {
+            font-size: 40px;
+            font-weight: normal;
+            margin: 20px 0;
+          }
+          .state {
+            font-size: 18px;
+            font-weight: normal;
+            margin: 42px 0;
+          }
+        }
+      }
+    }
     .dots {
       display: flex !important;
       flex-direction: column;
       align-items: flex-start;
       bottom: unset;
       // left: unset;
-      top: 50%;
-      right: 50px;
+      top: 47%;
+      right: 26px;
       width: auto;
       transform: translateY(-50%);
       li {
@@ -28,6 +119,7 @@
           align-items: center;
           span {
             opacity: 0;
+            font-size: 17px;
           }
           &::after {
             content: "";

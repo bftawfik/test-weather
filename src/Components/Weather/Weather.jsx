@@ -8,12 +8,12 @@ import * as classes from "./Weather.module.scss";
 
 const labels = ["Home", "Weather"];
 const sliderSettingsBuilder = () => ({
-  dragging: false,
+  swipe: false,
   infinite: false,
   autoplay: false,
   dots: true,
   dotsClass: `slick-dots ${classes.dots}`,
-  arrows: false,
+  arrows: true,
   className: classes.slider,
   accessibility: true,
   focusOnSelect: true,
@@ -27,16 +27,6 @@ const sliderSettingsBuilder = () => ({
       </div>
     );
   },
-  // nextArrow: (
-  //   <NextArrow>
-  //     <RightArrowWide className={styles.arrows} />
-  //   </NextArrow>
-  // ),
-  // prevArrow: (
-  //   <PrevArrow>
-  //     <LeftArrowWide className={styles.arrows} />
-  //   </PrevArrow>
-  // ),
 });
 
 const Weather = () => {
@@ -46,13 +36,27 @@ const Weather = () => {
         <section>
           <h2>Home</h2>
         </section>
-        <section>
-          <h2>{missingData.title}</h2>
-          <h3>{missingData.subtitle}</h3>
-          <form>
-            <input type="text" />
-            <button type="submit">{missingData.submit}</button>
-          </form>
+        <section className={classes.slide}>
+          <div className={classes.contents}>
+            <h2 className={classes.title}>{missingData.title}</h2>
+            <h3 className={classes.subtitle}>{missingData.subtitle}</h3>
+            <form className={classes.form}>
+              <input type="text" />
+              <button type="submit">{missingData.submit}</button>
+            </form>
+            <div className={classes.data}>
+              <h2>Poland, US</h2>
+              <i src="" />
+              <h3>Clear</h3>
+              <p className={classes.temp}>
+                -4.76<sup>°</sup>
+              </p>
+              <p className={classes.tempRang}>
+                -5.35<sup>°</sup> -3.29<sup>°</sup>
+              </p>
+              <p className={classes.state}>Clear sky</p>
+            </div>
+          </div>
         </section>
       </Slider>
     </div>
