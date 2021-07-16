@@ -1,7 +1,7 @@
-import * as Classes from "./Forcast.module.scss";
+import * as classes from "./Forcast.module.scss";
 
 const Forcast = () => {
-  return <div className={Classes.Forcast}>Forcast</div>;
+  return <div className={classes.Forcast}>Forcast</div>;
 };
 
 export default Forcast;

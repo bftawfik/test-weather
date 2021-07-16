@@ -1,7 +1,7 @@
-import * as Classes from "./NotFound.module.scss";
+import * as classes from "./NotFound.module.scss";
 
 const NotFound = () => {
-  return <div className={Classes.NotFound}>Not Found</div>;
+  return <div className={classes.NotFound}>Not Found</div>;
 };
 
 export default NotFound;

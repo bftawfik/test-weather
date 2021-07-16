@@ -1,10 +1,10 @@
 import Weather from "../../Components/Weather/Weather";
 
-import * as Classes from "./Home.module.scss";
+import * as classes from "./Home.module.scss";
 
 const Home = () => {
   return (
-    <div className={Classes.Home}>
+    <div className={classes.Home}>
       <Weather />
     </div>
   );
