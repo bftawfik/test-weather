@@ -133,6 +133,18 @@
             margin: 42px 0;
           }
         }
+        button {
+          align-self: center;
+          background-color: transparent;
+          border: 0;
+          background-color: $clr-004;
+          width: 30%;
+          font-size: 18px;
+          font-family: inherit;
+          color: inherit;
+          padding: 20px 0;
+          cursor: pointer;
+        }
       }
     }
     .dots {
@@ -140,7 +152,6 @@
       flex-direction: column;
       align-items: flex-start;
       bottom: unset;
-      // left: unset;
       top: 47%;
       right: 26px;
       width: auto;
