@@ -1,4 +1,4 @@
-import React, { setState, useRef } from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,7 +12,6 @@ import * as classes from "./Weather.module.scss";
 const labels = ["Home", "Weather"];
 
 const Weather = () => {
-  // const [slideNo, setSlideNo] = setState([0]);
   const slider = useRef(null);
 
   const sliderSettingsBuilder = () => ({
@@ -28,7 +27,6 @@ const Weather = () => {
     lazyLoad: "ondemand",
     slidesToShow: 1,
     slidesToScroll: 1,
-    // beforeChange: (_, next) => this.setSlideNo({ next }),
     customPaging: function (i) {
       return (
         <div>
