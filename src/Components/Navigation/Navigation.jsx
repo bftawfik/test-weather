@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
-import missingData from "../../mock/navigation";
 
-const navigation = ({ classes }) => {
+const navigation = ({ classes, asButtons, navigationList }) => {
+
+  const renderItem = (item, asButtons) => {
+    return asButtons ? (
+      <button onClick={item.handler}>{item.label}</button>
+    ) : (
+      <Link to={item.link}>{item.label}</Link>
+    );
+  }
   return (
-      <ul className={classes.Navigation}>
-        {missingData.navigation.map((item) => (
-          <li key={item.id}>
-            <Link to={item.link}>{item.label}</Link>
-          </li>
-        ))}
-      </ul>
+    <ul className={classes.Navigation}>
+      {navigationList.map((item) => (
+        <li key={item.id}>{renderItem(item, asButtons)}</li>
+      ))}
+    </ul>
   );
 };
 

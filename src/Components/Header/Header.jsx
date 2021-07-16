@@ -2,7 +2,6 @@ import Navigation from "../Navigation/Navigation";
 import Banner from "../Banner/Banner";
 
 import missingData from "../../mock/header";
-
 import * as classes from "./Header.module.scss";
 
 const Header = () => {
@@ -14,7 +13,7 @@ const Header = () => {
           <span>{missingData.slogan}</span>
         </div>
       </div>
-      <Navigation classes={classes} />
+      <Navigation classes={classes} navigationList={missingData.navigation}/>
       <Banner classes={classes} />
     </div>
   );
