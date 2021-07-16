@@ -76,6 +76,7 @@
   }
   .Banner {
     position: relative;
+    overflow: hidden;
     .dots {
       span {
         position: absolute;
@@ -152,6 +153,39 @@
       margin: 135px 0 50px 47%;
       line-height: 1.17;
       letter-spacing: -6px;
+    }
+  }
+  @media screen and(max-width: 1200px) {
+    .Banner {
+      .title {
+        margin: 135px 50px;
+        text-align: center;
+      }
+    }
+  }
+  @media screen and(max-width: 640px) {
+    height: 500px;
+    .headerRow {
+      flex-direction: column;
+      .logo {
+        position: relative;
+        margin: 10px 0;
+      }
+      .slogan {
+        margin: 0;
+        font-size: 12px;
+        &::before {
+          width: 20px;
+          height: 20px;
+          font-size: 14px;
+        }
+      }
+    }
+    .Banner {
+      height: 100%;
+      .title {
+        font-size: 50px;
+      }
     }
   }
 }

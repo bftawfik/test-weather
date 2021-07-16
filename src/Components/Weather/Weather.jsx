@@ -157,6 +157,7 @@ const Weather = () => {
                 onChange={(e) => {
                   setInputValue(e.target.value);
                 }}
+                size={1}
               />
               <button type="submit">{missingData.submit}</button>
             </form>
